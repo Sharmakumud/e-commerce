@@ -1,0 +1,123 @@
+.nav_section {
+  margin-bottom: 10rem;
+}
+
+.section {
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+
+  .container {
+    min-width: 100%;
+
+    .form {
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+      @media (min-width: 1000px) {
+        width: 40%;
+      }
+
+      .title {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+
+      .label {
+        span {
+          font-family: $font-f-secondary;
+          font-weight: $font-w-700;
+          letter-spacing: $ls-secondary;
+        }
+
+        .input {
+          border: solid 0.2rem #9e9e9e;
+          border-radius: 1rem;
+          padding: 1rem 2rem;
+          width: 100%;
+          font-size: 1.6rem;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+
+    .button {
+      font-family: $font-f-primary;
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      font-size: 1.6rem;
+      border: solid 0.2rem #000;
+      border-radius: 1rem;
+      width: 100%;
+      background: #000;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: $ls-button;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      transition: all 0.1s ease-in;
+
+      &:active {
+        transform: scale(0.9);
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .googleButton {
+      background-color: #4285f4; /* Google Blue */
+      color: white; /* Text color */
+      border: none; /* No border */
+      border-radius: 1rem; /* Rounded corners */
+      padding: 1rem 2rem; /* Padding */
+      font-size: 1.6rem; /* Font size */
+      cursor: pointer; /* Pointer cursor on hover */
+      display: flex; /* Flexbox for alignment */
+      align-items: center; /* Center items vertically */
+      justify-content: center; /* Center items horizontally */
+      transition: background-color 0.3s; /* Transition for hover effect */
+      
+      /* Additional styles for responsiveness */
+      width: 100%; /* Full width */
+      margin-top: 10px; /* Space above the button */
+
+      &:hover {
+        background-color: #357ae8; /* Darker blue on hover */
+      }
+
+      /* Optional: Add Google icon */
+      &::before {
+        content: '';
+        background-image: url('/path/to/google-icon.png'); /* Path to Google icon */
+        background-size: contain; /* Ensure the icon fits */
+        background-repeat: no-repeat; /* Don't repeat the icon */
+        width: 20px; /* Width of the icon */
+        height: 20px; /* Height of the icon */
+        margin-right: 8px; /* Space between icon and text */
+      }
+    }
+
+    .login {
+      text-align: center;
+      margin-top: 2rem;
+      font-family: $font-f-secondary;
+      letter-spacing: $ls-secondary;
+
+      a {
+        font-family: $font-f-secondary;
+        font-weight: $font-w-700;
+        letter-spacing: $ls-secondary;
+      }
+    }
+  }
+}
